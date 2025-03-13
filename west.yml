@@ -1,0 +1,17 @@
+manifest:
+  version: 0.8
+
+  projects:
+    - name: zephyr
+      url: https://github.com/zephyrproject-rtos/zephyr
+      revision: v4.0.0
+      import:
+        file: west.yml
+        path-prefix: deps
+        name-allowlist:
+          - nrf
+          - zephyr
+          - hal_nordic
+  
+  self:
+    path: dev
