@@ -1,0 +1,1 @@
+"hal_nordic":"C:/Users/brandon.edmonds/dev/repos/test/deps/modules/hal/nordic":"${ZEPHYR_HAL_NORDIC_CMAKE_DIR}"
