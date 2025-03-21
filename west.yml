@@ -1,6 +1,9 @@
 manifest:
   version: 0.8
 
+  self:
+    path: dev
+
   projects:
     - name: zephyr
       url: https://github.com/zephyrproject-rtos/zephyr
@@ -12,6 +15,6 @@ manifest:
           - nrf
           - zephyr
           - hal_nordic
-  
-  self:
-    path: dev
+          - tinycrypt
+          - segger
+          - cmsis

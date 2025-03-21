@@ -1,0 +1,4 @@
+"cmsis":"C:/Users/brandon.edmonds/dev/repos/test/deps/modules/hal/cmsis":"${ZEPHYR_CMSIS_CMAKE_DIR}"
+"hal_nordic":"C:/Users/brandon.edmonds/dev/repos/test/deps/modules/hal/nordic":"${ZEPHYR_HAL_NORDIC_CMAKE_DIR}"
+"segger":"C:/Users/brandon.edmonds/dev/repos/test/deps/modules/debug/segger":"${ZEPHYR_SEGGER_CMAKE_DIR}"
+"tinycrypt":"C:/Users/brandon.edmonds/dev/repos/test/deps/modules/crypto/tinycrypt":"C:/Users/brandon.edmonds/dev/repos/test/deps/modules/crypto/tinycrypt"
