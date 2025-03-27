@@ -40,6 +40,7 @@ typedef struct {
   struct k_mutex  lock;
   Sapp            sapps[MAX_SAPPS];
   uint16_t        next_app_idx;
+  // const struct    shell *shell;
 
   K_KERNEL_STACK_MEMBER(stack_area, CONFIG_SAPP_STACK_SIZE);
   struct k_work_q work_q;
@@ -104,8 +105,8 @@ static void work_handler(struct k_work* work_id) {
   }
   
   if (current_state != sapp->state) {  // show state changes only
-    LOG_INF("%s {enum:STATE}%d -> {enum:STATE}%d, delay %d",
-    sapp->name, current_state, sapp->state, sapp->delay_ms);
+    LOG_INF("%s STATE %s -> STATE %s, delay %d",
+    sapp->name, state_strings[current_state], state_strings[sapp->state], sapp->delay_ms);
   }
   
   if (sapp->state == STATE_FINI || sapp->state == STATE_DISABLED) {
@@ -199,7 +200,7 @@ int sapp_start(const char *name, int (*setup)(void), int (*loop)(void))
   // NOTE: this depends on STATE_STARTUP == 0 by initialized _ctx.sapps[] to zeros
   if (!( (ctx.sapps[app_idx].state == STATE_DISABLED) ||
          (ctx.sapps[app_idx].state == STATE_STARTUP)) ) {
-    LOG_ERR("attempt to restart sapp while in busy state {enum:sapp_lib_state_e}%d", ctx.sapps[app_idx].state);
+    LOG_ERR("attempt to restart sapp while in busy state STATE %s", state_strings[ctx.sapps[app_idx].state]);
     int rc = k_mutex_unlock(&ctx.lock);
     ARG_UNUSED(rc);
     return -EBUSY;

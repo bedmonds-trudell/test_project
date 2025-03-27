@@ -1,0 +1,19 @@
+{
+  "toolchainPath": "c:\\Users\\brandon.edmonds\\dev\\tooling\\nordic\\ncs\\toolchains\\b620d30767",
+  "sdkPath": "c:\\Users\\brandon.edmonds\\dev\\repos\\test",
+  "board": "nrf52840dk/nrf52840",
+  "boardDirs": [
+    "c:\\Users\\brandon.edmonds\\dev\\repos\\test\\deps\\zephyr\\boards\\nordic\\nrf52840dk"
+  ],
+  "boardRevision": "",
+  "boardDir": "c:\\Users\\brandon.edmonds\\dev\\repos\\test\\deps\\zephyr\\boards\\nordic\\nrf52840dk",
+  "shouldBuild": true,
+  "optimizations": "none",
+  "cmakeArgs": [],
+  "confFiles": [],
+  "buildDirectory": "build",
+  "kconfigFragments": [],
+  "snippets": [],
+  "dtcOverlays": [],
+  "extraDtcOverlays": []
+}

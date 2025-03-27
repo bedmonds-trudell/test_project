@@ -5,7 +5,7 @@
 
 LOG_MODULE_REGISTER(sapp_example);
 
-#define TIME_SCHED_DELAY_LOOP_MS   200
+#define TIME_SCHED_DELAY_LOOP_MS   100
 #define DEMO_MAX_WORK_COUNT        40
 #define CBOR_TX_BUF_SIZE           148
 #define UCLOGGE_PLOT_NAME_SIZE     12
@@ -62,7 +62,7 @@ static int setup(void) {
  *          positive value
  *             - represents the milliseconds delay to poll loop()
  *             - value can change during the life of sapp
- *             - reccomended value should generally be >= 10
+ *             - recommended value should generally be >= 10
  *
  * - WARNING do not block loop() for long time (>= ~100ms),
  *   as this will starve other threads
