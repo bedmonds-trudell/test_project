@@ -83,7 +83,10 @@ static int loop(void) {
     LOG_INF("working %d/%d", ctx.work_count, DEMO_MAX_WORK_COUNT);
   }
 
-  if (ctx.work_count >= DEMO_MAX_WORK_COUNT) return 0;  // done?
+  if (ctx.work_count >= DEMO_MAX_WORK_COUNT) {
+    return 0;  // done?
+  }
+  
   return TIME_SCHED_DELAY_LOOP_MS;
 }
 
